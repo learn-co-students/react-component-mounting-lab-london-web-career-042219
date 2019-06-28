@@ -9,10 +9,17 @@ class Timer extends Component {
 
   // add your code here
 
+  // increaseTimer = () => {
+  //   this.setState({ time: this.state.time + 1 })
+  // }
 
+  componentDidMount() {
+    this.interval = setInterval(this.clockTick, 1000)
+  }
 
-
-
+  componentWillUnmount() {
+      this.stopClock
+  }
 
 
   render() {
